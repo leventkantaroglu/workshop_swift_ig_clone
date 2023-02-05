@@ -1,24 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="workshop_swift_ig_clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fX1-kQ-Xqp">
+                                <rect key="frame" x="66" y="346" width="76" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQV-rY-fKz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e92-bW-qgf">
+                                <rect key="frame" x="258" y="346" width="84" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czM-jW-de8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3w-hM-bGi">
+                                <rect key="frame" x="161" y="79" width="68" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psO-xb-F39">
+                                <rect key="frame" x="91" y="172" width="211" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOW-oy-Srz">
+                                <rect key="frame" x="91" y="238" width="211" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qIF-A1-deD"/>
+                    <connections>
+                        <outlet property="emailText" destination="psO-xb-F39" id="mdg-wL-LTk"/>
+                        <outlet property="passwordText" destination="LOW-oy-Srz" id="axt-Dq-UN7"/>
+                        <segue destination="6Zc-nL-t6V" kind="presentation" identifier="toFeedVc" modalPresentationStyle="fullScreen" id="ffI-FN-xnX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-900" y="45.774647887323944"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="9qU-Oh-jN8">
+            <objects>
+                <viewController id="CVz-xm-xOp" customClass="UploadViewController" customModule="workshop_swift_ig_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SH7-YX-ThZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JWe-gP-Rfz">
+                                <rect key="frame" x="76" y="120" width="241" height="240"/>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="05L-xu-h9d"/>
+                                    <constraint firstAttribute="width" constant="241" id="nKb-mT-5DW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyO-1j-OoI">
+                                <rect key="frame" x="76" y="560" width="240" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadButtonClicked:" destination="CVz-xm-xOp" eventType="touchUpInside" id="Xto-zU-puH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="shX-CL-xJU">
+                                <rect key="frame" x="76" y="479" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xXg-1x-shA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JWe-gP-Rfz" firstAttribute="centerX" secondItem="SH7-YX-ThZ" secondAttribute="centerX" id="18S-NK-xcl"/>
+                            <constraint firstItem="shX-CL-xJU" firstAttribute="centerX" secondItem="JWe-gP-Rfz" secondAttribute="centerX" id="4ac-0S-eAw"/>
+                            <constraint firstItem="shX-CL-xJU" firstAttribute="trailing" secondItem="PyO-1j-OoI" secondAttribute="trailing" id="8p8-1j-dxl"/>
+                            <constraint firstItem="PyO-1j-OoI" firstAttribute="top" secondItem="shX-CL-xJU" secondAttribute="bottom" constant="47" id="LvW-VU-sO5"/>
+                            <constraint firstItem="shX-CL-xJU" firstAttribute="leading" secondItem="JWe-gP-Rfz" secondAttribute="leading" id="ZQy-uD-ysP"/>
+                            <constraint firstItem="shX-CL-xJU" firstAttribute="leading" secondItem="PyO-1j-OoI" secondAttribute="leading" id="Zgo-lR-80T"/>
+                            <constraint firstItem="JWe-gP-Rfz" firstAttribute="leading" secondItem="xXg-1x-shA" secondAttribute="leading" constant="76" id="bv0-4w-0lV"/>
+                            <constraint firstItem="xXg-1x-shA" firstAttribute="bottom" secondItem="PyO-1j-OoI" secondAttribute="bottom" constant="174" id="f9n-ec-f1A"/>
+                            <constraint firstItem="JWe-gP-Rfz" firstAttribute="top" secondItem="xXg-1x-shA" secondAttribute="top" constant="59" id="ynz-ux-5b2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" image="plus" catalog="system" id="SRU-BL-aeu"/>
+                    <connections>
+                        <outlet property="commentText" destination="shX-CL-xJU" id="hdr-Kd-z4U"/>
+                        <outlet property="imageView" destination="JWe-gP-Rfz" id="6Qy-LA-lRm"/>
+                        <outlet property="uploadButton" destination="PyO-1j-OoI" id="EYm-2i-kfa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7f-Ao-fUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.70229007633588" y="391.54929577464793"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="sdU-z8-9Vl">
+            <objects>
+                <viewController id="cCf-Vj-iJj" customClass="SettingsViewController" customModule="workshop_swift_ig_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vMF-cS-p1H">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQg-7a-v4C">
+                                <rect key="frame" x="158" y="409" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="cCf-Vj-iJj" eventType="touchUpInside" id="Vd4-N3-5pm"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="At9-ae-Q9G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sGB-7Z-7b1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="list.dash" catalog="system" id="gH3-M1-ZAv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKa-Lt-1xs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="1052"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="pNn-GR-xFe">
+            <objects>
+                <viewController id="gsu-xt-N2j" customClass="FeedViewController" customModule="workshop_swift_ig_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ktm-QY-KfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="c30-YU-vN5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="squareshape.dashed.squareshape" catalog="system" id="3i0-AB-EvH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMs-YI-G7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="-257"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GlG-FQ-0ba">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" id="6Zc-nL-t6V" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nXj-3G-dZS"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JIe-dy-ELz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gsu-xt-N2j" kind="relationship" relationship="viewControllers" id="Dow-Nn-ltF"/>
+                        <segue destination="CVz-xm-xOp" kind="relationship" relationship="viewControllers" id="cdO-CL-iE8"/>
+                        <segue destination="cCf-Vj-iJj" kind="relationship" relationship="viewControllers" id="U7n-VM-t3f"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUW-KF-OlB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-136" y="47"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="squareshape.dashed.squareshape" catalog="system" width="128" height="114"/>
+        <image name="tray.fill" catalog="system" width="128" height="88"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
