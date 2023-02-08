@@ -11,9 +11,15 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
 
         emailText.text = "@mail.com"
         passwordText.text = "123456"
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBOutlet var emailText: UITextField!

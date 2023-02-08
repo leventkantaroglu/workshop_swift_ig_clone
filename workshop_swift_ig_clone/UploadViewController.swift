@@ -21,6 +21,13 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             action: #selector(chooseImage)
         )
         imageView.addGestureRecognizer(gestureRecognizer)
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @objc func chooseImage() {
@@ -71,7 +78,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 if error != nil {
                                     print(error!.localizedDescription)
                                 } else {
-                                    self.imageView.image = UIImage(named: "tray.fill")
+                                    self.imageView.image = UIImage(systemName: "tray.fill")
                                     self.commentText.text = ""
                                     self.tabBarController?.selectedIndex = 0
                                 }
