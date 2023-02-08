@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C50B8E8312F1E05938425C7 /* Pods_workshop_swift_ig_clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC57C26655D3634EA94DE883 /* Pods_workshop_swift_ig_clone.framework */; };
+		C0B71EF729927F9500FB3026 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B71EF629927F9500FB3026 /* FeedCell.swift */; };
 		C0B8FF5C29903B28005ACBE1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8FF5B29903B28005ACBE1 /* FeedViewController.swift */; };
 		C0B8FF5E29903B35005ACBE1 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8FF5D29903B35005ACBE1 /* UploadViewController.swift */; };
 		C0B8FF6029903B51005ACBE1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8FF5F29903B51005ACBE1 /* SettingsViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		33DF6E8CC6D0BB1D116BF72B /* Pods-workshop_swift_ig_clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-workshop_swift_ig_clone.debug.xcconfig"; path = "Target Support Files/Pods-workshop_swift_ig_clone/Pods-workshop_swift_ig_clone.debug.xcconfig"; sourceTree = "<group>"; };
 		90241E5CDDF5FA374EF65698 /* Pods-workshop_swift_ig_clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-workshop_swift_ig_clone.release.xcconfig"; path = "Target Support Files/Pods-workshop_swift_ig_clone/Pods-workshop_swift_ig_clone.release.xcconfig"; sourceTree = "<group>"; };
+		C0B71EF629927F9500FB3026 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		C0B8FF5B29903B28005ACBE1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		C0B8FF5D29903B35005ACBE1 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		C0B8FF5F29903B51005ACBE1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				C0B8FF5B29903B28005ACBE1 /* FeedViewController.swift */,
 				C0B8FF5D29903B35005ACBE1 /* UploadViewController.swift */,
 				C0B8FF5F29903B51005ACBE1 /* SettingsViewController.swift */,
+				C0B71EF629927F9500FB3026 /* FeedCell.swift */,
 			);
 			path = workshop_swift_ig_clone;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B71EF729927F9500FB3026 /* FeedCell.swift in Sources */,
 				C0C995BB2989982D0048ED63 /* ViewController.swift in Sources */,
 				C0C995B72989982D0048ED63 /* AppDelegate.swift in Sources */,
 				C0B8FF5E29903B35005ACBE1 /* UploadViewController.swift in Sources */,

@@ -63,13 +63,17 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                     "imageUrl": imageUrl!,
                                     "postedBy": Auth.auth().currentUser!.email!,
                                     "comment": self.commentText.text!,
-                                    "date": "Date",
+                                    "date": FieldValue.serverTimestamp(),
                                     "likes": 0
                                 ]
                             // let firestoreRef: DocumentReference =
                             firestore.collection("Posts").addDocument(data: firestorePost) { error in
                                 if error != nil {
                                     print(error!.localizedDescription)
+                                } else {
+                                    self.imageView.image = UIImage(named: "tray.fill")
+                                    self.commentText.text = ""
+                                    self.tabBarController?.selectedIndex = 0
                                 }
                             }
                         }
